@@ -1,6 +1,6 @@
 version: 0.0
 Resources:
-  - HelloWorld:
+  - yoppy-test:
       Type: AWS::Lambda::Function
       Properties:
         Name: "yoppy-test"
