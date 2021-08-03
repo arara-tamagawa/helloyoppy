@@ -3,7 +3,17 @@ version: 0.2
 phases:
   build:
     commands:
+      - CurrentVersion=$(echo $(aws lambda get-alias --function-name yoppy-test --name yoppy-test-alias | grep FunctionVersion | tail -1 |tr -cd "[0-9]"))
+  post_build:
+    commands:
       - ls
+      - aws lambda publish-version --function-name yoppy-test
+      - TargetVersion=$(echo $(aws lambda list-versions-by-function --function-name yoppy-test | grep Version | tail -1 | tr -cd "[0-9]"))
+      - echo $CurrentVersion
+      - echo $TargetVersion
+      - sed -i -e "s/{{CurrentVersion}}/$CurrentVersion/g" appspec.yml
+      - sed -i -e "s/{{TargetVersion}}/$TargetVersion/g" appspec.yml
+
 artifacts:
   files:
     - "**/*"
