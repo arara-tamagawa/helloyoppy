@@ -3,7 +3,7 @@ Resources:
   - yoppy-test:
       Type: AWS::Lambda::Function
       Properties:
-        Name: "yoppy-test"
+        Name: "yoppy-test1"
         Alias: "yoppy-test-alias"
         CurrentVersion: "1"
         TargetVersion: "1"
