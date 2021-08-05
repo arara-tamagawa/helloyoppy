@@ -9,4 +9,4 @@ Resources:
         TargetVersion: "2"
 
 Hooks:
-  - BeforeAllowTraffic: "BeforeAllowTrafficHookYoppyFunction"
+  - BeforeAllowTraffic: "BeforeAllowTrafficHookYoppyFunctio"
