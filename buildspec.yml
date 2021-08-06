@@ -17,4 +17,5 @@ artifacts:
   type: zip
   files:
     - appspec.yaml
+    - lambda_function.py
 
