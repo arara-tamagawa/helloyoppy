@@ -7,6 +7,3 @@ Resources:
         Alias: "yoppy-test-alias"
         CurrentVersion: "2"
         TargetVersion: "2"
-
-Hooks:
-  - BeforeAllowTraffic: "BeforeAllowTrafficHookYoppyFunctio"
